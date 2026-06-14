@@ -12,14 +12,14 @@ var tamanhoMax = 22;
 function aumentarFonte() {
     if (tamanhoAtual < tamanhoMax) {
         tamanhoAtual += 2;
-        document.body.style.fontSize = tamanhoAtual + "px";
+        document.documentElement.style.fontSize = tamanhoAtual + "px";
     }
 }
 
 function diminuirFonte() {
     if (tamanhoAtual > tamanhoMin) {
         tamanhoAtual -= 2;
-        document.body.style.fontSize = tamanhoAtual + "px";
+        document.documentElement.style.fontSize = tamanhoAtual + "px";
     }
 }
 
