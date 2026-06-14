@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Contato - Blog F Birgeier</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blog F Birgeier</h1>
+        <p class="subtitulo">ADS - Universidade de Passo Fundo &bull; Espumoso, RS</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre Mim</a></li>
+            <li><a href="curriculum.html">Currículo</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li><a href="receitas.html">Receitas</a></li>
+        </ul>
+    </nav>
+
+    <div class="barra-acessibilidade">
+        <span>Acessibilidade:</span>
+        <button class="btn-acesso" id="btn-aumentar-fonte" title="Aumentar fonte">A+</button>
+        <button class="btn-acesso" id="btn-diminuir-fonte" title="Diminuir fonte">A-</button>
+        <button class="btn-noturno" id="btn-noturno">Modo Noturno</button>
+    </div>
+
+    <main>
+
+        <section>
+            <h2>Contato</h2>
+            <p>
+                Quer falar comigo? Pode ser sobre tecnologia, sobre o blog, sobre receitas ou qualquer
+                outra coisa. Preencha o formulário abaixo e entrarei em contato em breve.
+            </p>
+            <br>
+            <p class="subtitulo-secao">E-mail: febirgeier@gmail.com &bull; Espumoso, RS</p>
+        </section>
+
+        <section>
+            <div id="aviso-form" class="aviso-form"></div>
+
+            <form id="form-contato" novalidate>
+
+                <div class="campo-form">
+                    <label for="nome">Nome completo *</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Informe seu nome completo"
+                        autocomplete="name"
+                    >
+                    <span class="mensagem-erro" id="erro-nome"></span>
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">E-mail *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        autocomplete="email"
+                    >
+                    <span class="mensagem-erro" id="erro-email"></span>
+                </div>
+
+                <div class="campo-form">
+                    <label for="assunto">Assunto *</label>
+                    <input
+                        type="text"
+                        id="assunto"
+                        name="assunto"
+                        placeholder="Sobre o que você quer falar?"
+                    >
+                    <span class="mensagem-erro" id="erro-assunto"></span>
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Escreva sua mensagem aqui..."
+                    ></textarea>
+                    <span class="mensagem-erro" id="erro-mensagem"></span>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Blog F Birgeier &mdash; Felipe Saldanha Birgeier</p>
+        <p>Análise e Desenvolvimento de Sistemas &bull; UPF &bull; 1&ordm; Semestre 2026</p>
+        <p>Disciplina: Desenvolvimento para Web</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

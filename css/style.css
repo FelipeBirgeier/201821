@@ -1,0 +1,647 @@
+
+:root {
+    --cor-fundo: #f5f5f0;
+    --cor-fundo-card: #ffffff;
+    --cor-texto: #2c2c2c;
+    --cor-texto-suave: #5a5a5a;
+    --cor-primaria: #3a6b8a;
+    --cor-primaria-escura: #2d536d;
+    --cor-borda: #d0d0c8;
+    --cor-header: #2d3e4e;
+    --cor-footer: #2d3e4e;
+    --cor-footer-texto: #c8d4dc;
+    --cor-link: #3a6b8a;
+    --cor-link-hover: #2d536d;
+    --cor-erro: #b94040;
+    --cor-sucesso: #3a7a4a;
+}
+
+
+body.modo-noturno {
+    --cor-fundo: #1a1e22;
+    --cor-fundo-card: #23292f;
+    --cor-texto: #dce4ea;
+    --cor-texto-suave: #9ab0bc;
+    --cor-primaria: #5a9aba;
+    --cor-primaria-escura: #7ab8d4;
+    --cor-borda: #3a444c;
+    --cor-header: #14191e;
+    --cor-footer: #14191e;
+    --cor-footer-texto: #7a9aaa;
+    --cor-link: #7ab8d4;
+    --cor-link-hover: #9acde8;
+}
+
+/* === RESET BÁSICO === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === BODY === */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* === HEADER === */
+header {
+    background-color: var(--cor-header);
+    color: #ffffff;
+    padding: 20px 0 0 0;
+    text-align: center;
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: normal;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+header p.subtitulo {
+    font-size: 0.85rem;
+    color: #a8bec8;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+/* === NAVEGAÇÃO === */
+nav {
+    background-color: var(--cor-primaria);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+    background-color: var(--cor-primaria-escura);
+    text-decoration: underline;
+}
+
+/* === BARRA DE ACESSIBILIDADE === */
+.barra-acessibilidade {
+    background-color: var(--cor-fundo-card);
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    color: var(--cor-texto-suave);
+}
+
+.barra-acessibilidade span {
+    margin-right: 4px;
+}
+
+.btn-acesso {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.2s;
+}
+
+.btn-acesso:hover {
+    background-color: var(--cor-borda);
+}
+
+.btn-noturno {
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria-escura);
+    color: #ffffff;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.2s;
+}
+
+.btn-noturno:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+/* === MAIN === */
+main {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* === SECTIONS === */
+section {
+    margin-bottom: 36px;
+}
+
+section h2 {
+    font-size: 1.4rem;
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+    font-weight: normal;
+}
+
+section h3 {
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+
+/* === BOAS-VINDAS HOME === */
+.boas-vindas {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-left: 4px solid var(--cor-primaria);
+    padding: 20px 24px;
+    margin-bottom: 30px;
+}
+
+.boas-vindas h2 {
+    border: none;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.boas-vindas p {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* === POSTAGENS (GRID) === */
+.lista-postagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.postagem {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    padding: 18px;
+    transition: border-color 0.2s;
+}
+
+.postagem:hover {
+    border-color: var(--cor-primaria);
+}
+
+.postagem h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--cor-primaria);
+}
+
+.postagem p {
+    font-size: 0.88rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 10px;
+}
+
+.postagem .data {
+    font-size: 0.78rem;
+    color: var(--cor-texto-suave);
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.postagem a.leia-mais {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: var(--cor-link);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.postagem a.leia-mais:hover {
+    color: var(--cor-link-hover);
+    text-decoration: underline;
+}
+
+/* === SOBRE MIM === */
+.sobre-conteudo {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.sobre-conteudo img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid var(--cor-borda);
+    flex-shrink: 0;
+}
+
+.sobre-texto p {
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+}
+
+/* === INTERESSES === */
+.lista-interesses {
+    list-style: disc;
+    margin-left: 22px;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}
+
+.lista-interesses li {
+    margin-bottom: 6px;
+}
+
+/* === TABELAS === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+}
+
+table th {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+}
+
+table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+}
+
+table tr:nth-child(even) td {
+    background-color: var(--cor-fundo);
+}
+
+table tr:hover td {
+    background-color: var(--cor-borda);
+}
+
+/* === LISTAS CURRICULO === */
+ul.lista-experiencias {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.lista-experiencias li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    font-size: 0.93rem;
+    color: var(--cor-texto);
+    padding-left: 14px;
+    position: relative;
+}
+
+ul.lista-experiencias li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+}
+
+/* === FORMULÁRIO === */
+form {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    padding: 24px;
+    max-width: 580px;
+}
+
+.campo-form {
+    margin-bottom: 18px;
+}
+
+.campo-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+    color: var(--cor-texto-suave);
+    font-weight: bold;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+    border-color: var(--cor-primaria);
+}
+
+.campo-form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.mensagem-erro {
+    color: var(--cor-erro);
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4px;
+    display: none;
+}
+
+.mensagem-erro.visivel {
+    display: block;
+}
+
+.aviso-form {
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+    display: none;
+    border: 1px solid;
+}
+
+.aviso-form.erro {
+    color: var(--cor-erro);
+    border-color: var(--cor-erro);
+    background-color: #fdecea;
+    display: block;
+}
+
+.aviso-form.sucesso {
+    color: var(--cor-sucesso);
+    border-color: var(--cor-sucesso);
+    background-color: #e8f5ea;
+    display: block;
+}
+
+body.modo-noturno .aviso-form.erro {
+    background-color: #3a1c1c;
+}
+
+body.modo-noturno .aviso-form.sucesso {
+    background-color: #1c3a20;
+}
+
+/* === BOTÃO ENVIAR === */
+.btn-enviar {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    border: none;
+    padding: 10px 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+/* === RECEITAS === */
+ul.lista-receitas {
+    list-style: none;
+    padding: 0;
+}
+
+ul.lista-receitas li {
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 12px 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul.lista-receitas li::before {
+    content: ">";
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-family: monospace;
+}
+
+ul.lista-receitas li a {
+    color: var(--cor-link);
+    font-weight: bold;
+}
+
+ul.lista-receitas li a:hover {
+    color: var(--cor-link-hover);
+    text-decoration: underline;
+}
+
+/* === PÁGINA RECEITA === */
+.receita-info {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+    color: var(--cor-texto-suave);
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.receita-info span strong {
+    color: var(--cor-texto);
+}
+
+.receita-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border: 1px solid var(--cor-borda);
+    display: block;
+    margin-bottom: 24px;
+}
+
+.receita-placeholder {
+    width: 100%;
+    max-width: 420px;
+    height: 200px;
+    border: 2px dashed var(--cor-borda);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto-suave);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+    background-color: var(--cor-fundo-card);
+}
+
+ul.ingredientes {
+    list-style: disc;
+    margin-left: 22px;
+    margin-bottom: 8px;
+}
+
+ul.ingredientes li {
+    padding: 4px 0;
+    font-size: 0.93rem;
+    color: var(--cor-texto);
+}
+
+ol.preparo {
+    margin-left: 22px;
+    margin-bottom: 8px;
+}
+
+ol.preparo li {
+    padding: 6px 0;
+    font-size: 0.93rem;
+    color: var(--cor-texto);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+ol.preparo li:last-child {
+    border-bottom: none;
+}
+
+.link-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--cor-link);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+    text-decoration: none;
+    border: 1px solid var(--cor-borda);
+    padding: 7px 16px;
+    transition: background-color 0.2s;
+}
+
+.link-voltar:hover {
+    background-color: var(--cor-borda);
+    text-decoration: none;
+}
+
+/* === LINKS === */
+a {
+    color: var(--cor-link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--cor-link-hover);
+}
+
+/* === FOOTER === */
+footer {
+    background-color: var(--cor-footer);
+    color: var(--cor-footer-texto);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
+footer a {
+    color: var(--cor-footer-texto);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* === UTILITÁRIOS === */
+.subtitulo-secao {
+    font-size: 0.82rem;
+    color: var(--cor-texto-suave);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+hr.divisor {
+    border: none;
+    border-top: 1px solid var(--cor-borda);
+    margin: 30px 0;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .lista-postagens {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+
+    .sobre-conteudo img {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        padding: 0 12px;
+        margin: 18px auto;
+    }
+}

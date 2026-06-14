@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ 
+    <title>Sobre Mim - Blog F Birgeier</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blog F Birgeier</h1>
+        <p class="subtitulo">ADS - Universidade de Passo Fundo &bull; Espumoso, RS</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre Mim</a></li>
+            <li><a href="curriculum.html">Currículo</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li><a href="receitas.html">Receitas</a></li>
+        </ul>
+    </nav>
+
+    <div class="barra-acessibilidade">
+        <span>Acessibilidade:</span>
+        <button class="btn-acesso" id="btn-aumentar-fonte" title="Aumentar fonte">A+</button>
+        <button class="btn-acesso" id="btn-diminuir-fonte" title="Diminuir fonte">A-</button>
+        <button class="btn-noturno" id="btn-noturno">Modo Noturno</button>
+    </div>
+
+    <main>
+
+        <section>
+            <h2>Sobre Mim</h2>
+
+            <div class="sobre-conteudo">
+
+                <img
+                    src="../projeto/assets/FOTOPERFIL.jpeg"
+                    alt="Foto de perfil de Felipe Saldanha Birgeier"
+                    onerror="this.style.display='none'; document.getElementById('placeholder-foto').style.display='flex';"
+                >
+                <div id="placeholder-foto" style="display:none; width:180px; height:180px; border:2px dashed #d0d0c8; align-items:center; justify-content:center; font-family:Arial,sans-serif; font-size:0.8rem; color:#888; flex-shrink:0; text-align:center; padding:10px;">
+                    Foto de Perfil<br>
+                </div>
+
+                <div class="sobre-texto">
+                    <p>
+                        Olá! Me chamo Felipe Saldanha Birgeier, tenho 21 anos e sou de Espumoso, no Rio Grande
+                        do Sul. Desde pequeno sempre tive interesse por tecnologia, e uma das primeiras coisas
+                        que me fez querer programar foi o RPG Maker, um programa para criar jogos. Ficava
+                        horas criando cenários e sistemas de batalha sem nem perceber que estava aprendendo
+                        lógica de programação.
+                    </p>
+                    <p>
+                        Em 2026 ingressei no curso de Análise e Desenvolvimento de Sistemas na
+                        Universidade de Passo Fundo (UPF). Escolhi ADS exatamente por causa desse gosto
+                        por programação que venho cultivando desde cedo. Quero aprender de verdade e construir
+                        uma carreira sólida na área de tecnologia.
+                    </p>
+                    <p>
+                        Atualmente trabalho como programador na Sicredi, na área de automação de RPA (Robotic
+                        Process Automation). É um trabalho que me ensina muito sobre processos e automação, e
+                        consigo ver o impacto direto do que desenvolvo no dia a dia da empresa. Meu objetivo
+                        é crescer dentro da Sicredi e me tornar um desenvolvedor sênior, com domínio técnico
+                        real e reconhecimento pelo meu trabalho.
+                    </p>
+                    <p>
+                        Além da tecnologia, sou apaixonado por culinária. Gosto de cozinhar no tempo livre
+                        e testar receitas novas. Neste blog vou compartilhar algumas das minhas receitas
+                        favoritas também.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="divisor">
+
+        <section>
+            <h2>Por que escolhi ADS?</h2>
+            <p>
+                A resposta é simples: programar sempre foi algo que eu fazia por prazer antes de ser
+                profissão. Com o RPG Maker aprendi lógica, com o tempo fui explorando Python e automações
+                no trabalho, e cada vez mais percebi que queria entender de forma mais profunda como
+                os sistemas funcionam. ADS me dá essa base teórica e prática que complementa o que já
+                aprendo no dia a dia profissional.
+            </p>
+        </section>
+
+        <hr class="divisor">
+
+        <section>
+            <h2>Áreas que quero aprender</h2>
+            <p class="subtitulo-secao">Coisas que tenho interesse em aprofundar durante o curso e depois</p>
+            <ul class="lista-interesses">
+                <li>Desenvolvimento Web - front-end e back-end</li>
+                <li>Segurança da Informação - proteger sistemas e dados</li>
+                <li>Banco de Dados - modelagem e consultas avançadas</li>
+                <li>Ciência de Dados - análise e visualização de informações</li>
+                <li>RPA e Automação de Processos - área onde já atuo e quero me aprofundar</li>
+            </ul>
+        </section>
+
+        <hr class="divisor">
+
+        <section>
+            <h2>Na UPF até agora</h2>
+            <p>
+                Estou no primeiro semestre e já posso dizer que a disciplina que mais gostei até agora
+                é Desenvolvimento para Web. O professor é muito descontraído, explica de um jeito que
+                dá pra entender de verdade, e acaba sendo meu favorito do semestre. As aulas práticas
+                são onde mais aprendo, porque coloco a mão no código e erro muito, e errando é que a
+                gente aprende.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Blog F Birgeier &mdash; Felipe Saldanha Birgeier</p>
+        <p>Análise e Desenvolvimento de Sistemas &bull; UPF &bull; Semestre 2026</p>
+        <p>Disciplina: Desenvolvimento para Web</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
