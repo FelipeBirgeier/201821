@@ -55,91 +55,17 @@ function carregarPreferencias() {
     }
 }
 
-// === VALIDAÇÃO DO FORMULÁRIO ===
-function validarFormulario() {
-    var nome = document.getElementById("nome");
-    var email = document.getElementById("email");
-    var assunto = document.getElementById("assunto");
-    var mensagem = document.getElementById("mensagem");
+// === ENVIO DO FORMULÁRIO ===
+function enviarFormulario() {
+    var form = document.getElementById("form-contato");
     var aviso = document.getElementById("aviso-form");
 
-    var erroNome = document.getElementById("erro-nome");
-    var erroEmail = document.getElementById("erro-email");
-    var erroAssunto = document.getElementById("erro-assunto");
-    var erroMensagem = document.getElementById("erro-mensagem");
-
-    var valido = true;
-
-    // Limpar erros anteriores
-    erroNome.classList.remove("visivel");
-    erroEmail.classList.remove("visivel");
-    erroAssunto.classList.remove("visivel");
-    erroMensagem.classList.remove("visivel");
-    aviso.className = "aviso-form";
-    aviso.textContent = "";
-
-    // Validar nome
-    if (nome.value.trim() === "") {
-        erroNome.classList.add("visivel");
-        erroNome.textContent = "Por favor, informe seu nome.";
-        valido = false;
-    } else if (nome.value.trim().length < 3) {
-        erroNome.classList.add("visivel");
-        erroNome.textContent = "O nome deve ter pelo menos 3 caracteres.";
-        valido = false;
-    }
-
-    // Validar email
-    if (email.value.trim() === "") {
-        erroEmail.classList.add("visivel");
-        erroEmail.textContent = "Por favor, informe seu e-mail.";
-        valido = false;
-    } else if (!validarEmail(email.value.trim())) {
-        erroEmail.classList.add("visivel");
-        erroEmail.textContent = "Informe um e-mail válido.";
-        valido = false;
-    }
-
-    // Validar assunto
-    if (assunto.value.trim() === "") {
-        erroAssunto.classList.add("visivel");
-        erroAssunto.textContent = "Por favor, informe o assunto.";
-        valido = false;
-    }
-
-    // Validar mensagem
-    if (mensagem.value.trim() === "") {
-        erroMensagem.classList.add("visivel");
-        erroMensagem.textContent = "Por favor, escreva sua mensagem.";
-        valido = false;
-    } else if (mensagem.value.trim().length < 10) {
-        erroMensagem.classList.add("visivel");
-        erroMensagem.textContent = "A mensagem deve ter pelo menos 10 caracteres.";
-        valido = false;
-    }
-
-    if (!valido) {
-        aviso.className = "aviso-form erro";
-        aviso.textContent = "Por favor, corrija os campos indicados abaixo.";
-        return false;
-    }
-
-    // Formulário válido
     aviso.className = "aviso-form sucesso";
     aviso.textContent = "Mensagem enviada com sucesso! Em breve entrarei em contato.";
 
-    // Limpar campos
-    nome.value = "";
-    email.value = "";
-    assunto.value = "";
-    mensagem.value = "";
+    form.reset();
 
     return false; // Evita envio real
-}
-
-function validarEmail(email) {
-    var formato = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return formato.test(email);
 }
 
 // === INICIALIZAÇÃO ===
@@ -163,5 +89,11 @@ window.onload = function () {
     var btnDiminuirFonte = document.getElementById("btn-diminuir-fonte");
     if (btnDiminuirFonte) {
         btnDiminuirFonte.onclick = diminuirFonte;
+    }
+
+    // Formulário de contato
+    var formContato = document.getElementById("form-contato");
+    if (formContato) {
+        formContato.onsubmit = enviarFormulario;
     }
 };

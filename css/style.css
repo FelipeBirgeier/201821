@@ -12,7 +12,6 @@
     --cor-footer-texto: #c8d4dc;
     --cor-link: #3a6b8a;
     --cor-link-hover: #2d536d;
-    --cor-erro: #b94040;
     --cor-sucesso: #3a7a4a;
 }
 
@@ -46,7 +45,6 @@ body {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 16px;
     line-height: 1.7;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 /* === HEADER === */
@@ -386,18 +384,6 @@ form {
     min-height: 110px;
 }
 
-.mensagem-erro {
-    color: var(--cor-erro);
-    font-size: 0.8rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 4px;
-    display: none;
-}
-
-.mensagem-erro.visivel {
-    display: block;
-}
-
 .aviso-form {
     padding: 10px 14px;
     margin-bottom: 16px;
@@ -407,22 +393,11 @@ form {
     border: 1px solid;
 }
 
-.aviso-form.erro {
-    color: var(--cor-erro);
-    border-color: var(--cor-erro);
-    background-color: #fdecea;
-    display: block;
-}
-
 .aviso-form.sucesso {
     color: var(--cor-sucesso);
     border-color: var(--cor-sucesso);
     background-color: #e8f5ea;
     display: block;
-}
-
-body.modo-noturno .aviso-form.erro {
-    background-color: #3a1c1c;
 }
 
 body.modo-noturno .aviso-form.sucesso {
